@@ -316,3 +316,10 @@ OkHttpRequest.multiDownload("ulr")
                 });
 
 ```
+####取消请求
+```
+取消单个请求
+ OkHttpRequest.cancelCallByTag("tag");
+取消全部请求
+ OkHttpRequest.cancelAllCalls();
+```
