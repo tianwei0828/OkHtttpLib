@@ -1,14 +1,14 @@
 # OkHtttpLib
-####基于OkHttp链式调用的网络请求库，支持同步的GET 、POST；异步的GET、POST；同时支持多线程断点续传以及针对下载前手机存储空间的判断，下载后MD5或者SHA1验证。
+#### 基于OkHttp链式调用的网络请求库，支持同步的GET 、POST；异步的GET、POST；同时支持多线程断点续传以及针对下载前手机存储空间的判断，下载后MD5或者SHA1验证。
 说明：
   所有回调都是在UI线程
-####使用说明
-```
+#### 使用说明
+```java
 在Application中初始化
 OkHttpRequest.init(this);
 ```
 
-```
+```java
 同步GET请求
  //返回的是Bean
  Bean  bean =  OkHttpRequest.get("url")
@@ -25,7 +25,7 @@ OkHttpRequest.init(this);
                 .build()
                 .executeToString();
 ```
-```
+```java
 异步的GET请求
 //返回的是Bean
 OkHttpRequest.get("url")
@@ -72,7 +72,7 @@ OkHttpRequest.get("url")
                 });
 ```
 
-```
+```java
 同步POST
 //返回的是Bean
 Bean bean = OkHttpRequest.post("url")
@@ -93,7 +93,7 @@ Bean bean = OkHttpRequest.post("url")
                 .executeToString();
 ```
 
-```
+```java
 异步的POST
 //返回的是Bean
 OkHttpRequest.post("url")
@@ -145,7 +145,7 @@ OkHttpRequest.post("url")
                 });
 ```
 
-```
+```java
 文件上传
 OkHttpRequest.upload("url")
                 .tag("tag")
@@ -194,7 +194,7 @@ OkHttpRequest.upload("url")
 
 ```
 
-```
+```java
 文件下载
  OkHttpRequest.download("ulr")
                 .tag("tag")
@@ -255,7 +255,7 @@ OkHttpRequest.upload("url")
 ```
 
 
-```
+```java
 多线程断点下载
 OkHttpRequest.multiDownload("ulr")
                 .tag("tag")
@@ -316,8 +316,8 @@ OkHttpRequest.multiDownload("ulr")
                 });
 
 ```
-####取消请求
-```
+#### 取消请求
+```java
 取消单个请求
  OkHttpRequest.cancelCallByTag("tag");
 取消全部请求
